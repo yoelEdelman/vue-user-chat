@@ -13,5 +13,4 @@ let notification = {
         </div>
 `
 }
-
 export default notification
