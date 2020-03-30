@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+    <transition name="fade" mode="out-in">
+        <notification v-if="user !==  null" :name="user.name" :key="user.name"></notification>
+    </transition>
+<section class="main">
+    <div class="users">
+
+        <user @click-user="showUser" v-for="(user, index) in usersArray" :user="user" :index="index"></user>
+
+    </div>
+    <div class="chat">
+        <div class="insideChat">
+            <div class="forLeft">
+                <div class="leftMsg">
+                    <article class="headerMsg">
+                        <img src="https://picsum.photos/200/300">
+                        <span>Clément</span>
+                    </article>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur, in ipsa libero mollitia nesciunt saepe soluta vitae? A dicta doloribus explicabo ipsa nesciunt nostrum nulla officia officiis, possimus vel?</p>
+                </div>
+            </div>
+
+
+            <div class="forRight">
+                <div class="rightMsg">
+                    <article class="headerMsg">
+                        <span>Yoel</span>
+                        <img class="rightImg" src="https://picsum.photos/200/300">
+                    </article>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur, in ipsa libero mollitia nesciunt saepe soluta vitae? A dicta doloribus explicabo ipsa nesciunt nostrum nulla officia officiis, possimus vel?</p>
+                </div>
+            </div>
+            <template v-if="messages.length > 0">
+                <message v-for="(message, index) in messages" :message="message"></message>
+            </template>
+        </div>
+
+    <div class="forText">
+        <textarea></textarea>
+        <button>Send</button>
+    </div>
+    </div>
+</section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+<script src="app.js" type="module"></script>
+</body>
+</html>

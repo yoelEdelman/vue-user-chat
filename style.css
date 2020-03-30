@@ -1,0 +1,155 @@
+.main{
+    width: 80vw;
+    margin: 30px auto;
+    box-shadow: 0px 0px 3px lightgray;
+    border-radius: 15px;
+    height: 80vh;
+    display: flex;
+
+}
+
+.users{
+    width: 30%;
+    box-shadow: 0px 0px 3px lightgray;
+    height: 80vh;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    overflow: scroll;
+
+}
+
+.chat{
+    height: 80vh;
+    width: 70%;
+
+}
+
+.insideChat{
+    height: 75vh;
+    overflow: scroll;
+    padding-bottom: 10px;
+}
+.user{
+    /*display: flex;*/
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid lightgray;
+    color: dodgerblue;
+}
+
+.forRight{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.leftMsg{
+
+    min-width: 30%;
+    max-width: 80%;
+    background-color: #f3f3f3;
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.rightMsg{
+    min-width: 30%;
+    max-width: 80%;
+    background-color: dodgerblue;
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: white;
+
+}
+.rightMsg p{
+    font-size: 90%;
+    margin-top: 10px;
+}
+
+
+.rightMsg .headerMsg{
+
+    justify-content: flex-end;
+}
+
+.leftMsg p{
+    margin-top: 10px;
+    font-size: 90%;
+}
+.headerMsg{
+    display: flex;
+    align-items: center;
+}
+
+
+.leftMsg .headerMsg img{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin-right: 5px;
+}
+
+
+.rightImg{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin-left: 5px;
+}
+
+
+.forText{
+    width: 100%;
+    display: flex;
+}
+
+
+.forText textarea{
+    width: 90%;
+    height: 5vh;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 5px lightgray;
+
+}
+
+.forText button{
+    width: 10%;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    outline: none;
+    border-bottom-right-radius: 15px;
+}
+
+
+.box {
+    margin-bottom: 10px;
+    background: linear-gradient(124deg, rgba(154,154,154,0.48363095238095233) 100%, rgba(161,161,161,0.41360294117647056) 100%);    border-radius: 15px;
+    line-height: 1;
+    padding: 15px 15px;
+    position: fixed;
+    right: 10px;
+    animation: ease-in-out 0.8s forwards reveal;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: all 0.5s;
+}
+.fade-enter {
+    opacity: 0;
+
+    transform: translateY(-20px);
+
+}
+
+.fade-leave-to{
+    opacity: 0;
+
+}
